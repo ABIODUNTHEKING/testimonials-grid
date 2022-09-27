@@ -17,7 +17,7 @@ body{
 main{
     display: grid;
     grid-template-areas: 'firstPerson' 'secondPerson' 'thirdPerson' 'fourthPerson' 'fifthPerson';
-    gap: 1.5rem;
+    gap: 10px;
     width: 90%;
 }
 section{
