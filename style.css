@@ -4,23 +4,25 @@
     box-sizing: border-box;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
-
 body{
     background-color: hsl(210, 46%, 95%);
     display: flex;
+    height: 105vh;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+
 }
-
-
+main{
+    display: grid;
+    grid-template-areas: 'firstPerson' 'secondPerson' 'thirdPerson' 'fourthPerson' 'fifthPerson';
+    gap: 1.5rem;
+    width: 90%;
+}
 section{
     border-radius: 10px;
-    padding: 20px;
-    line-height: 1.5;
-    margin: 30px 20px;
+    padding: 20px 35px;
 }
 
 article p{
@@ -68,6 +70,7 @@ article p{
 
 .fourthPerson img{
     border: 3px solid hsl(263, 55%, 52%);
+    box-shadow: 0.5px 0.5px black;
 }
 
 .fifthPerson{
@@ -88,10 +91,10 @@ img{
 }
 
 h1{
-    margin: 20px 0;
+    margin: 5px 0;
     font-weight: 600;
     font-size: 22px;
-    line-height: 1.3;
+    
 }
 
 .verified{
@@ -111,31 +114,8 @@ footer a {
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (min-width: 700px) {
-    body{
-        margin: 10px 50px;
-    }
+@media screen and (min-width: 700px){
     main{
-        display: grid;
-        grid-template-areas: 'firstPerson firstPerson secondPerson fifthPerson'
-        'thirdPerson fourthPerson fourthPerson fifthPerson' ;
-
-        grid-auto-rows: 1%;
-        gap: 20px;
+        grid-template-areas: 'firstPerson firstPerson secondPerson fifthPerson' 'thirdPerson fourthPerson fourthPerson fifthPerson';
     }
-    section{
-        margin: 0;
-    }
-    
-    
-}
-
-
-@media screen and (max-width: 1000px){
-    main{
-        grid-template-areas: 'secondPerson thirdPerson'
-        'firstPerson fifthPerson'
-        'fourthPerson fourthPerson';
-    }
-   
 }
